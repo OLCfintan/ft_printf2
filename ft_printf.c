@@ -6,7 +6,7 @@
 /*   By: oel-mouk <oel-mouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 17:13:37 by oel-mouk          #+#    #+#             */
-/*   Updated: 2023/12/29 17:13:37 by oel-mouk         ###   ########.fr       */
+/*   Updated: 2023/12/29 17:43:43 by oel-mouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ int	ft_check(char x, va_list args)
 			temp = ft_putstr(&c, 'c');
 		}
 	}
-	else if (x == 'd' || x == 'u')
+	else if (x == 'd' || x == 'i')
 		temp = ft_putnbr(va_arg(args, int));
 	else if (x == 'u')
 		temp = ft_putnbr(va_arg(args, unsigned int));
 	else if (x == 'x' || x == 'X' || x == 'p')
-		temp = ft_puthexa(va_arg(args, unsigned long int), x);
+		temp = ft_puthexa(va_arg(args, void *), x);
 	else
 		temp = ft_putstr(&x, 'c');
 	return (temp);

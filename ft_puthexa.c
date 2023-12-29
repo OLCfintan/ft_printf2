@@ -6,7 +6,7 @@
 /*   By: oel-mouk <oel-mouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 17:14:09 by oel-mouk          #+#    #+#             */
-/*   Updated: 2023/12/29 17:14:09 by oel-mouk         ###   ########.fr       */
+/*   Updated: 2023/12/29 17:46:11 by oel-mouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ long int	ft_num(long long int x, int nb)
 	return (i);
 }
 
-int	ft_puthexa(unsigned long int y, char l)
+int	ft_puthexa(void *z, char l)
 {
+	unsigned long int y = (unsigned long int)z;
 	long int	temp;
 	char		*tab;
 	int			i;
